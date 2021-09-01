@@ -15,12 +15,6 @@ public class Usuario implements Serializable{
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private long id;
 	
-	private String nome;
-	private String rg;
-	private String cpf;
-	private String matricula;
-	private String telefone;
-	
 	public long getId() {
 		return id;
 	}
@@ -57,6 +51,10 @@ public class Usuario implements Serializable{
 	public void setTelefone(String telefone) {
 		this.telefone = telefone;
 	}
-	
+	private String nome;
+	private String rg;
+	private String cpf;
+	private String matricula;
+	private String telefone;
 	
 }
