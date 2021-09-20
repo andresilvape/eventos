@@ -1,11 +1,15 @@
-<!doctype html>
-<html>
+
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
 <!-- Required meta tags -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+	integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+	crossorigin="anonymous" />
 <!-- Bootstrap CSS -->
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
@@ -13,19 +17,13 @@
 	integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
 	crossorigin="anonymous">
 
-<title>Status Aplicação</title>
+<title>Cadastro de Evento</title>
 </head>
 <body>
-
 	<header>
-		<nav class="navbar navbar-expand-lg navbar-primary bg-primary">
-			<div class="container-md">
-				<a class="navbar-brand text-white" href="#">	
-					<i class="fas fa-home fa-1x text-white"></i>
-				</a>
-			</div>
-		</nav>
+		<div th:replace="fragments/nav :: nav"></div>
 	</header>
+
 	<div class="container">
 		<main>
 			<div class="alert alert-success mt-4" role="alert">Aplicação
@@ -35,27 +33,54 @@
 
 			<div class="row d-flex justify-content-around">
 
-				<div class="card d-flex shadow-sm p-3 mb-5 bg-white rounded" style="width: 18rem;">
-					<i class="fas fa-user-plus fa-5x text-center mt-2 text-secondary "></i>
-					<div class="card-body">
-						<h5 class="card-title">Adicionar Registros</h5>
-						<p class="card-text">Poderá adicionar registro ao banco H2.</p>
-						<a href="/cadastrarEvento" class="btn btn-primary">Adicionar</a>
+				<div class="card mb-3 shadow p-3 mb-5 bg-body rounded"
+					style="max-width: 540px;">
+					<div class="row g-0">
+						<div class="col-md-4 text-center mt-4">
+							<i class="fas fa-user-plus fa-5x text-center mt-2 text-secondary"></i>
+						</div>
+						<div class="col-md-8">
+							<div class="card-body">
+								<h5 class="card-title">Adicionar Evento</h5>
+								<p class="card-text">Descrição.</p>
+								<p class="card-text">
+									<small class="text-muted">Last updated 3 mins ago</small>
+								</p>
+							</div>
+						</div>
 					</div>
 				</div>
 
-				<div class="card d-flex shadow-sm p-3 mb-5 bg-white rounded" style="width: 18rem;">
-					<i class="fas fa-address-card text-center fa-5x mt-2 text-secondary"></i>
-					<div class="card-body">
-						<h5 class="card-title">Listar Registros</h5>
-						<p class="card-text">Serão exibidos os registros cadastrados.</p>
-						<a href="/listarEvento" class="btn btn-primary">Listar</a>
+				<div class="card mb-3 shadow p-3 mb-5 bg-body rounded"
+					style="max-width: 540px;">
+					<div class="row g-0">
+						<div class="col-md-4 text-center mt-4">
+							<i
+								class="fas fa-address-card text-center fa-5x mt-2 text-secondary"></i>
+							<!-- <img src="..." class="img-fluid rounded-start" alt="...">-->
+						</div>
+						<div class="col-md-8">
+							<div class="card-body">
+								<h5 class="card-title">Listar Eventos</h5>
+								<p class="card-text">Descrição.</p>
+								<p class="card-text">
+									<small class="text-muted">Last updated 3 mins ago</small>
+								</p>
+							</div>
+						</div>
 					</div>
 				</div>
-
 			</div>
-
 		</section>
+		<section></section>
 	</div>
+	<footer>
+		<div th:replace="fragments/footer :: footer"></div>
+	</footer>
 </body>
+<!-- JavaScript Bundle with Popper -->
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+	crossorigin="anonymous"></script>
 </html>
