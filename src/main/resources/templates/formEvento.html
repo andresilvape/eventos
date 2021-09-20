@@ -5,7 +5,10 @@
 <!-- Required meta tags -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+	integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+	crossorigin="anonymous" />
 <!-- Bootstrap CSS -->
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
@@ -16,27 +19,26 @@
 <title>Cadastrar Evento</title>
 </head>
 <body>
-	<header>
-		<nav class="navbar navbar-expand-lg navbar-primary bg-primary">
-			<div class="container-md">
-			<a class="navbar-brand text-white" href="/">	
-					<i class="fas fa-home fa-1x text-white"></i>
-				Home</a>
-			</div>
-		</nav>
+<header>
+		<div th:replace="fragments/nav :: nav"></div>
 	</header>
 	<main>
+
 		<div class="container col-lg-8 mt-4">
+
+			<h2 class="text-secondary p-2 m-2">Adicionar Evento</h2>
 
 			<form method="post" class="form-group p-3">
 				<div class="row">
 					<div class="form-group">
 						<label for="nome">Nome do Evento</label> <input type="text"
-							class="form-control" name="nome" placeholder="Insira o Nome" required>
+							class="form-control" name="nome" placeholder="Insira o Nome"
+							required>
 					</div>
 					<div class="form-group mt-4">
 						<label for="local">Local</label> <input type="text"
-							class="form-control" name="local" placeholder="Insira o Local" required>
+							class="form-control" name="local" placeholder="Insira o Local"
+							required>
 					</div>
 
 					<div class="col-md-3 mt-4">
@@ -46,13 +48,14 @@
 
 					<div class="col-md-3 mt-4">
 						<label for="horario" class="form-label">Horario</label> <input
-							type="time" class="form-control" name="horario" id="horario" required>
+							type="time" class="form-control" name="horario" id="horario"
+							required>
 					</div>
-					</div>
-					<div class="col-md-4">
-					<button type="submit" class="btn btn-block btn-primary mt-4">Salvar</button>
-					</div>
-				
+				</div>
+				<div class="col-md-4">
+					<button type="submit" class="btn btn-block btn-primary mt-4" style="width: 180px">Salvar</button>
+				</div>
+
 			</form>
 		</div>
 

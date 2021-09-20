@@ -6,6 +6,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
+<!-- CSS only -->
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+	crossorigin="anonymous">
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
 	integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
@@ -17,32 +27,34 @@
 	integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
 	crossorigin="anonymous">
 
+
 <title>Listar Evento</title>
 </head>
 <body>
 
 	<header>
-		<nav class="navbar navbar-expand-lg navbar-primary bg-primary">
-			<div class="container-md">
-				<a class="navbar-brand text-white" href="/"> <i
-					class="fas fa-home fa-1x text-white"></i>Home
-				</a>
-			</div>
-		</nav>
+		<div th:replace="fragments/nav :: nav"></div>
 	</header>
-	<div class="container">
 
-		<div class="text-secondary mt-4" th:each="evento: ${eventos}">
-			<div class="card p-3">
-				<span th:text="${evento.nome}"></span>
-				<span th:text="${evento.local}"></span>
-				<span th:text="${evento.data}"></span>
-				<span th:text="${evento.horario}"></span>
-				
+	<div class="row d-flex justify-content-around mt-4">
+
+		<div class="card mb-4" style="max-width: 400px"
+			th:each="evento: ${eventos}">
+			<div class="card-header p-1 row" style="max-width: 400px">
+				<h6 class="card-title d-7" style="text-transform: uppercase">
+					<span th:text="${evento.nome}"></span>
+				</h6>
 			</div>
-
+			<div class="card-body">
+				<i class="bi bi-map fs-5"></i> <span th:text="${evento.local}"></span>
+				<p class="card-text">
+					<i class="bi bi-alarm fs-5 text-danger"></i> <span
+						class="text-danger" th:text="${evento.horario}"></span>
+				</p>
+				<a href="#" class="btn btn-outline-primary">Exibir Detalhes</a>
+			</div>
 		</div>
-
 	</div>
+
 </body>
 </html>
