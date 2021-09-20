@@ -15,7 +15,7 @@ public class EventoController {
 	@Autowired
 	EventoRepository eventorepository;
 	
-	@RequestMapping(value = "/eventos", method = RequestMethod.GET)
+	@RequestMapping(value = "/cadatro-de-eventos", method = RequestMethod.GET)
 	public String form() {
 		return "/formEvento";
 	}
@@ -24,7 +24,7 @@ public class EventoController {
 	public String form(Evento evento) {
 		eventorepository.save(evento);
 
-		return "redirect:/eventos";
+		return "redirect:/cadatro-de-eventos";
 	}
 	
 	  @RequestMapping(value="/eventos-adicionados")
