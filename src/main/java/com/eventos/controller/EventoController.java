@@ -17,10 +17,10 @@ public class EventoController {
 	
 	@RequestMapping(value = "/cadatro-de-eventos", method = RequestMethod.GET)
 	public String form() {
-		return "/formEvento";
+		return "/formeEvento";
 	}
 
-	@RequestMapping(value = "/eventos", method = RequestMethod.POST)
+	@RequestMapping(value = "/cadatro-de-eventos", method = RequestMethod.POST)
 	public String form(Evento evento) {
 		eventorepository.save(evento);
 
