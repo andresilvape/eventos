@@ -28,25 +28,62 @@
 
 	<section>
 
-		<div class="p-5 mb-4 bg-light rounded-1 
+		<div
+			class="p-5 mb-4 bg-light rounded-1 
 			animate__animated animate__backInRight animate__delay-1s"
-			style="
-			margin-top: 70px;
-			height:400px; 
-			background-image: url('images/6.svg'); 
-			background-position: right bottom;
-			background-repeat: no-repeat, repeat;
-			padding: 16px;
-		 	background-size: 600px 250px;">
-			                
+			style="margin-top: 70px; height: 400px; background-image: url('images/6.svg'); background-position: right bottom; background-repeat: no-repeat, repeat; padding: 16px; background-size: 600px 250px;">
+
 			<div class="container-fluidpy-5">
-			<h1 class="display-5 fw-bold">Customize Soluções!</h1>
-			<p class="col-md-8 fs-4">Forneçemos inovações com alto nível de
-				segurança e eficiência.</p>
-			<button class="btn btn-outline-primary btn-lg" type="button">Conheça
-				mais</button>
+				<h1 class="display-5 fw-bold">Customize Soluções!</h1>
+				<p class="col-md-8 fs-4">Forneçemos inovações com alto nível de
+					segurança e eficiência.</p>
+				<button class="btn btn-outline-primary btn-lg" type="button">Conheça
+					mais</button>
+			</div>
 		</div>
-		</div>
+
+<div class="container px-4 py-5 mt-4 mb-4 " id="hanging-icons">
+    <h2 class="pb-2 border-bottom">Hanging icons</h2>
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+      <div class="col d-flex align-items-start">
+        <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+          <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"></use></svg>
+        </div>
+        <div>
+          <h2>Featured title</h2>
+          <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+          <a href="#" class="btn btn-primary">
+            Primary button
+          </a>
+        </div>
+      </div>
+      <div class="col d-flex align-items-start">
+        <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+          <svg class="bi" width="1em" height="1em"><use xlink:href="#cpu-fill"></use></svg>
+        </div>
+        <div>
+          <h2>Featured title</h2>
+          <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+          <a href="#" class="btn btn-primary">
+            Primary button
+          </a>
+        </div>
+      </div>
+      <div class="col d-flex align-items-start">
+        <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+          <svg class="bi" width="1em" height="1em"><use xlink:href="#tools"></use></svg>
+        </div>
+        <div>
+          <h2>Featured title</h2>
+          <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+          <a href="#" class="btn btn-primary">
+            Primary button
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+		
 		<div class="container-fluid">
 
 			<div class="row d-flex justify-content-around mt-4">
@@ -95,7 +132,8 @@
 		</div>
 	</section>
 	<footer>
-		<div th:replace="fragments/footer :: footer"></div>
+		<div th:replace="fragments/footer :: footer"
+			class="text-decoration-none"></div>
 	</footer>
 </body>
 <!-- JavaScript Bundle with Popper -->
