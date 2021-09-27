@@ -22,9 +22,9 @@ public class EventoController {
 	 * public String form() { return "/formeEvento"; }
 	 */
 
-	@RequestMapping(value = "/cadatro-de-eventos", method = RequestMethod.GET)
+	@GetMapping(value = "/cadatro-de-eventos")
 	public String formeEvento() {
-		return "redirect:/formeEvento";
+		return "/formeEvento";
 	}
 
 	@RequestMapping(value = "/cadatro-de-eventos", method = RequestMethod.POST)
