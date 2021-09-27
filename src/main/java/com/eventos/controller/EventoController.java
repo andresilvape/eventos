@@ -11,7 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
 import com.eventos.domain.Evento;
 import com.eventos.repository.EventoRepository;
 
-@RestController 
+@Controller 
 public class EventoController {
 
 	@Autowired
